@@ -15,8 +15,6 @@ using SkillTracker.RabbitMQ;
 using SkillTracker.Shared;
 using System;
 using System.Reflection;
-using Enyim.Caching.Configuration;
-using System.Collections.Generic;
 
 namespace SkillTracker.WebAPI
 {
@@ -34,13 +32,8 @@ namespace SkillTracker.WebAPI
 
                 Configuration = builder.Build();
 
-                bool.TryParse(Configuration.GetSection("CacheSettings:UseInMemoryCache").Value, out bool useinMemory);
-
-                if (useinMemory)
-                {
-                    builder.AddConfigurationFromTable(options => options.UseSqlServer(Configuration.GetConnectionString("SkillTrackerDBConnection")));
-                    Configuration = builder.Build();
-                }
+                builder.AddConfigurationFromTable(options => options.UseSqlServer(Configuration.GetConnectionString("SkillTrackerDBConnection")));
+                Configuration = builder.Build();
             }
             catch (Exception ex)
             {
@@ -55,11 +48,13 @@ namespace SkillTracker.WebAPI
             var serviceClientSettingsConfig = Configuration.GetSection("RabbitMq");
             services.Configure<RabbitMqConfiguration>(serviceClientSettingsConfig);
 
-            var cacheSettings = Configuration.GetSection("CacheSettings");
-            services.Configure<CacheConfiguration>(cacheSettings);
+
 
             services.AddControllers();
 
+            services.AddScoped(typeof(ICacheHelper), typeof(CacheHelper));
+            services.AddMemoryCache();
+            services.AddTransient(typeof(ICacheProvider), typeof(InMemoryCacheProvider));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Skill Tracker API", Version = "v1" });
@@ -87,6 +82,7 @@ namespace SkillTracker.WebAPI
             });
             services.AddTransient<SkillTrackerDBContext>();
 
+            services.AddEfCoreRepository();
             services.AddEntityServices();
             services.Add(new ServiceDescriptor(typeof(IConfiguration),
               provider => Configuration,
@@ -103,24 +99,7 @@ namespace SkillTracker.WebAPI
               options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
 
-            if (cacheSettings.GetValue<bool>("UseInMemoryCache"))
-            {
-                services.AddEfCoreRepository();
-                services.AddMemoryCache();
-                services.AddTransient(typeof(ICacheProvider), typeof(InMemoryCacheProvider));
-                services.AddScoped(typeof(ICacheHelper), typeof(CacheHelper));
-                services.UseCacheWarmer();
-            }
-            else
-            {
-                services.AddEnyimMemcached(c => c.Servers = new List<Server> { new Server {
-                    Address = cacheSettings.GetValue<string>("CacheHost"),
-                    Port = cacheSettings.GetValue<int>("CachePort") 
-                } });
-                services.AddDistributedMemoryCache();
-                services.AddTransient(typeof(ICacheProvider), typeof(MemCacheProvider));
-            }
-
+            services.UseCacheWarmer();
             services.AddHttpClient();
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddSingleton<IUserSkillUpdateSender, UserSkillUpdateSender>();

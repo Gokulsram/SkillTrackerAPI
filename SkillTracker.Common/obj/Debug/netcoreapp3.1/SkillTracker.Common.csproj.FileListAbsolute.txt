@@ -1,9 +1,0 @@
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\bin\Debug\netcoreapp3.1\SkillTracker.Common.deps.json
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\bin\Debug\netcoreapp3.1\SkillTracker.Common.dll
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\bin\Debug\netcoreapp3.1\SkillTracker.Common.pdb
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.GeneratedMSBuildEditorConfig.editorconfig
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.AssemblyInfoInputs.cache
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.AssemblyInfo.cs
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.csproj.CoreCompileInputs.cache
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.dll
-D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Common\obj\Debug\netcoreapp3.1\SkillTracker.Common.pdb

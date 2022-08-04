@@ -1,6 +1,4 @@
 ﻿using MediatR;
-using Microsoft.Extensions.Options;
-using SkillTracker.Domain;
 using SkillTracker.RabbitMQ;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,20 +8,11 @@ namespace SkillTracker.Core
     public class CreateUserSkillCommandHandler : IRequestHandler<CreateUserSkillCommand, BaseResponse>
     {
         private readonly IUserProfileRepository _userprofileRepository;
-        private readonly IMemCacheHelper _memCacheHelper;
         private readonly IUserSkillUpdateSender _skillUpdateSender;
-        private readonly bool isInMemoryCache;
-
-        public CreateUserSkillCommandHandler(
-            IUserProfileRepository userprofileRepository,
-            IMemCacheHelper memCacheHelper,
-            IUserSkillUpdateSender skillUpdateSender,
-            IOptions<CacheConfiguration> cacheConfiguration)
+        public CreateUserSkillCommandHandler(IUserProfileRepository userprofileRepository, IUserSkillUpdateSender skillUpdateSender)
         {
             _userprofileRepository = userprofileRepository;
-            _memCacheHelper = memCacheHelper;
             _skillUpdateSender = skillUpdateSender;
-            isInMemoryCache = cacheConfiguration.Value.UseInMemoryCache;
         }
         public async Task<BaseResponse> Handle(CreateUserSkillCommand request, CancellationToken cancellationToken)
         {
@@ -38,10 +27,7 @@ namespace SkillTracker.Core
             }
             else
             {
-                if (isInMemoryCache)
-                    return await _userprofileRepository.AddUserProfile(request.UserSkill);
-                else
-                    return await _memCacheHelper.AddUserProfile(request.UserSkill);
+                return await _userprofileRepository.AddUserProfile(request.UserSkill);
             }
         }
     }
