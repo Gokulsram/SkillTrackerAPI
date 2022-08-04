@@ -1,0 +1,14 @@
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.csproj.AssemblyReference.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.AssemblyInfoInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.AssemblyInfo.cs
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.csproj.CoreCompileInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.Core.deps.json
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.Core.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.Core.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.Domain.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.Domain.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.Core\obj\Debug\netcoreapp3.1\SkillTracker.Core.pdb

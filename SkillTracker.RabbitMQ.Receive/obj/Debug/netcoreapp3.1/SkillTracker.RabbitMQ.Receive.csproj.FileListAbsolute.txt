@@ -1,0 +1,17 @@
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.csproj.AssemblyReference.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.AssemblyInfoInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.AssemblyInfo.cs
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.csproj.CoreCompileInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.deps.json
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.Core.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.Domain.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.Core.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.Domain.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.RabbitMQ.Receive\obj\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Receive.csproj.CopyComplete

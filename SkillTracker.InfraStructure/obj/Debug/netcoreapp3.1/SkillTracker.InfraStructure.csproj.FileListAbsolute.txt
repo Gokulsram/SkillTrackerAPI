@@ -1,0 +1,17 @@
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.AssemblyInfoInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.AssemblyInfo.cs
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.csproj.CoreCompileInputs.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.InfraStructure.deps.json
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.InfraStructure.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.InfraStructure.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.Core.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.Domain.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.Core.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.Domain.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\bin\Debug\netcoreapp3.1\SkillTracker.RabbitMQ.Publish.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.csproj.AssemblyReference.cache
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.dll
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.pdb
+D:\Gokul\SkillTrackerAPI\SkillTracker\SkillTracker.InfraStructure\obj\Debug\netcoreapp3.1\SkillTracker.InfraStructure.csproj.CopyComplete
