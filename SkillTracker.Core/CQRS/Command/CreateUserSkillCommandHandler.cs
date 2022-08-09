@@ -7,11 +7,15 @@ namespace SkillTracker.Core
 {
     public class CreateUserSkillCommandHandler : IRequestHandler<CreateUserSkillCommand, BaseResponse>
     {
-        private readonly IUserProfileRepository _userprofileRepository;
+        private readonly IMemCacheHelper _memCacheHelper;
         private readonly IUserSkillUpdateSender _skillUpdateSender;
-        public CreateUserSkillCommandHandler(IUserProfileRepository userprofileRepository, IUserSkillUpdateSender skillUpdateSender)
+
+        public CreateUserSkillCommandHandler(
+            IMemCacheHelper memCacheHelper,
+            IUserSkillUpdateSender skillUpdateSender
+        )
         {
-            _userprofileRepository = userprofileRepository;
+            _memCacheHelper = memCacheHelper;
             _skillUpdateSender = skillUpdateSender;
         }
         public async Task<BaseResponse> Handle(CreateUserSkillCommand request, CancellationToken cancellationToken)
@@ -27,7 +31,7 @@ namespace SkillTracker.Core
             }
             else
             {
-                return await _userprofileRepository.AddUserProfile(request.UserSkill);
+                return await _memCacheHelper.AddUserProfile(request.UserSkill);
             }
         }
     }

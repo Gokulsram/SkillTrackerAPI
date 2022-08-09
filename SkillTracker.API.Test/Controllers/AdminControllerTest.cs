@@ -21,7 +21,7 @@ namespace SkillTracker.API.Test
             _mediator = A.Fake<IMediator>();
             _adminController = new AdminController(_mediator);
 
-            List<UserProfileDetail> userProfileDetails = new List<UserProfileDetail> {
+            List<UserSkill> userProfileDetails = new List<UserSkill> {
                                                                                         new UserProfileDetail {
                                                                                             Name = "XUnitTest10001",
                                                                                         AssociateID = "CTSX10001",

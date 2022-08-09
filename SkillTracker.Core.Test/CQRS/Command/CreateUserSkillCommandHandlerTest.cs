@@ -15,7 +15,7 @@ namespace SkillTracker.Core.Test
         {
             _userSkillRepository = A.Fake<IUserProfileRepository>();
             _userSkillUpdateSender = A.Fake<IUserSkillUpdateSender>();
-            _createUserSkillCommandHandler = new CreateUserSkillCommandHandler(_userSkillRepository, _userSkillUpdateSender);
+           // _createUserSkillCommandHandler = new CreateUserSkillCommandHandler(_userSkillRepository, _userSkillUpdateSender);
         }
         [Fact]
         public async void Handle_ShouldCallAddAsync()

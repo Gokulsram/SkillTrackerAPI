@@ -16,7 +16,7 @@ namespace SkillTracker.Core.Test
         public GetUserSkillByTypeHandlerTest()
         {
             _userProfileRepository = A.Fake<IUserProfileRepository>();
-            _getUserSkillByTypeHandler = new GetUserSkillByTypeHandler(_userProfileRepository);
+            //_getUserSkillByTypeHandler = new GetUserSkillByTypeHandler(_userProfileRepository);
 
             _userProfileDetails = new List<UserProfileDetail> { new UserProfileDetail { Name = "Gokul" }, new UserProfileDetail { Name = "Suresh" } };
         }

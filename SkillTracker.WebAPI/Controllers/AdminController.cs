@@ -17,8 +17,9 @@ namespace SkillTracker.WebAPI.Controllers
         {
             _mediator = mediator;
         }
+
         [HttpGet("{criteria}/{criteriavalue}")]
-        public async Task<ActionResult<List<UserProfileDetail>>> GetAllUserProfile([FromRoute] string criteria, [FromRoute] string criteriavalue)
+        public async Task<ActionResult<List<UserSkill>>> GetAllUserProfile([FromRoute] string criteria, [FromRoute] string criteriavalue)
         {
             SearchCrteria searchCrteria = new SearchCrteria
             {

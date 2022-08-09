@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SkillTracker.Core
 {
-    public class GetUserSkillByTypeQuery : IRequest<List<UserProfileDetail>>
+    public class GetUserSkillByTypeQuery : IRequest<List<UserSkill>>
     {
         public SearchCrteria SearchCrteria { get; set; }
     }

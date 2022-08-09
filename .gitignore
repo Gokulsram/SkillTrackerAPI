@@ -32,3 +32,4 @@
 /SkillTracker.WebAPI/obj
 /SkillTrackerAPI.Messaging.Receive/obj
 /SkillTrackerAPI.Messaging.Receive/bin/Debug/netcoreapp3.1
+/.vs/SkillTracker/config/applicationhost.config
