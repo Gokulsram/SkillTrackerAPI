@@ -11,10 +11,10 @@ namespace SkillTracker.WebAPI
     {
         public static void AddEfCoreRepository(this IServiceCollection services)
         {
-            services.AddScoped(typeof(IGenericEfRepository<>), typeof(GenericEfRepository<>));
-            services.AddScoped(typeof(ISkillDetailRepository), typeof(SkillDetailRepository));
-            services.AddScoped(typeof(IUserProfileRepository), typeof(UserProfileRepository));
-            services.AddScoped(typeof(IUserSkillMappingRepository), typeof(UserSkillMappingRepository));
+            //services.AddScoped(typeof(IGenericEfRepository<>), typeof(GenericEfRepository<>));
+            //services.AddScoped(typeof(ISkillDetailRepository), typeof(SkillDetailRepository));
+            //services.AddScoped(typeof(IUserProfileRepository), typeof(UserProfileRepository));
+            //services.AddScoped(typeof(IUserSkillMappingRepository), typeof(UserSkillMappingRepository));
         }
         public static void AddEntityServices(this IServiceCollection services)
         {
