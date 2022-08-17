@@ -3,6 +3,7 @@ using SkillTracker.Core;
 using SkillTracker.Domain;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SkillTracker.InfraStructure
@@ -11,9 +12,11 @@ namespace SkillTracker.InfraStructure
     {
         const string _uerProfile = "UserProfile";
         private readonly IMemcachedClient _memCache;
-        public MemCacheRepository(IMemcachedClient memCache)
+        private readonly ISkillRepository _skillRepository;
+        public MemCacheRepository(IMemcachedClient memCache, ISkillRepository skillRepository)
         {
             _memCache = memCache;
+            _skillRepository = skillRepository;
         }
 
         public async Task<BaseResponse> AddUserProfile(UserSkill userSkill)
@@ -38,11 +41,36 @@ namespace SkillTracker.InfraStructure
             throw new NotImplementedException();
         }
 
-        public List<UserSkill> GetAllUserProfile(SearchCrteria searchCrteria)
+        public List<UserProfileDetail> GetAllUserProfile(SearchCrteria searchCrteria)
         {
             try
             {
-                return _memCache.Get<List<UserSkill>>(_uerProfile);
+
+                List<UserSkill> lstUserProfile = _memCache.Get<List<UserSkill>>(_uerProfile);
+                List<Skill> lstSkills = _skillRepository.GetSkill().Result;
+
+                var userProfileDetails =
+                    (from user in lstUserProfile.Where(x => x.Name.Contains(searchCrteria.Name) && x.AssociateID.Contains(searchCrteria.AssociateID))
+                     select new UserProfileDetail
+                     {
+                         AssociateID = user.AssociateID,
+                         Name = user.Name,
+                         Email = user.Email,
+                         Mobile = user.Mobile,
+                         UserID = user.UserID,
+                         UserTechnicalSkillDetails = (from skillmap in user.SkillList
+                                                      join skill in lstSkills on skillmap.SkillName equals skill.SkillName
+                                                      select new UserTechnicalSkill
+                                                      {
+                                                          SkillName = skill.SkillName,
+                                                          ExpertiseLevel = skillmap.ExpertiseLevel,
+                                                          IsTechnical = skill.IsTechnical
+                                                      }).Where(x => x.SkillName.Contains(searchCrteria.SkillName) && x.ExpertiseLevel > 10).
+                                                                                                                               OrderByDescending(x => x.ExpertiseLevel).ToList()
+
+                     }).ToList();
+
+                return userProfileDetails;
             }
             catch (Exception ex)
             {

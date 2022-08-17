@@ -41,11 +41,15 @@ namespace SkillTracker.RabbitMQ
         {
             try
             {
+                Uri uri = new Uri(_hostname);
+            
                 var factory = new ConnectionFactory
                 {
-                    HostName = _hostname,
+                    Uri = uri,
+                //HostName = _hostname,
                     //HostName = "localhost",
                     //Port = 15672,
+                    //Port = 5671,
                     UserName = _username,
                     Password = _password
                 };

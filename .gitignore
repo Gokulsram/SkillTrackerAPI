@@ -33,3 +33,5 @@
 /SkillTrackerAPI.Messaging.Receive/obj
 /SkillTrackerAPI.Messaging.Receive/bin/Debug/netcoreapp3.1
 /.vs/SkillTracker/config/applicationhost.config
+/.vs/SkillTracker/DesignTimeBuild/.dtbcache.v2
+/SkillTracker.WebAPI/SkillTracker.WebAPI.csproj.user
