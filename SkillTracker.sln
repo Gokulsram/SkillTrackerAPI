@@ -31,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.RabbitMQ.Recei
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0B925E60-CD2E-423E-AD38-2E5158DB4BD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.API.Test", "SkillTracker.API.Test\SkillTracker.API.Test.csproj", "{3ED8B351-E87A-4C08-8C24-6AADF2B78C6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.API.Test", "SkillTracker.API.Test\SkillTracker.API.Test.csproj", "{3ED8B351-E87A-4C08-8C24-6AADF2B78C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Core.Test", "SkillTracker.Core.Test\SkillTracker.Core.Test.csproj", "{51342C15-66BD-429F-8A23-D197B1ED508D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.Core.Test", "SkillTracker.Core.Test\SkillTracker.Core.Test.csproj", "{51342C15-66BD-429F-8A23-D197B1ED508D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.InfraStructure.Test", "SkillTracker.InfraStructure.Test\SkillTracker.InfraStructure.Test.csproj", "{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.InfraStructure.Test", "SkillTracker.InfraStructure.Test\SkillTracker.InfraStructure.Test.csproj", "{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.AWSServerless.RabbitMQ.Publish", "SkillTracker.AWSServerless.RabbitMQ.Publish\SkillTracker.AWSServerless.RabbitMQ.Publish.csproj", "{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{3ED8B351-E87A-4C08-8C24-6AADF2B78C6D} = {0B925E60-CD2E-423E-AD38-2E5158DB4BD6}
 		{51342C15-66BD-429F-8A23-D197B1ED508D} = {0B925E60-CD2E-423E-AD38-2E5158DB4BD6}
 		{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E} = {0B925E60-CD2E-423E-AD38-2E5158DB4BD6}
+		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA} = {F99286AC-D8FF-4804-B554-1A28D6484403}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55E262F3-4E8C-414C-99FF-59BBE6FB00B8}
