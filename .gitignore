@@ -44,3 +44,7 @@
 /SkillTracker.AWSServerless.RabbitMQ.Publish/bin/Release/netcoreapp3.1
 /SkillTracker.Shared/bin/Release/netcoreapp3.1
 /SkillTracker.InfraStructure/bin/Release/netcoreapp3.1
+/SkillTracker.AWSServerless.RabbitMQ.Receive/bin/Debug/netcoreapp3.1
+/SkillTracker.AWSServerless.RabbitMQ.Receive/obj
+/SkillTracker.AWSServerless.RabbitMQ.Receive/SkillTracker.AWSServerless.RabbitMQ.Receive.csproj.user
+/SkillTracker.AWSServerless.RabbitMQ.Receive/bin/Release/netcoreapp3.1

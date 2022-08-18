@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.InfraStructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.AWSServerless.RabbitMQ.Publish", "SkillTracker.AWSServerless.RabbitMQ.Publish\SkillTracker.AWSServerless.RabbitMQ.Publish.csproj", "{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.AWSServerless.RabbitMQ.Receive", "SkillTracker.AWSServerless.RabbitMQ.Receive\SkillTracker.AWSServerless.RabbitMQ.Receive.csproj", "{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{51342C15-66BD-429F-8A23-D197B1ED508D} = {0B925E60-CD2E-423E-AD38-2E5158DB4BD6}
 		{2D7E1CD7-92DB-4851-8EC8-2E1B23B5109E} = {0B925E60-CD2E-423E-AD38-2E5158DB4BD6}
 		{E2E67BD3-4006-4299-9DC6-CD587C9B4CEA} = {F99286AC-D8FF-4804-B554-1A28D6484403}
+		{287AFBF4-BA83-4C33-8EAA-B6DEE397757E} = {F99286AC-D8FF-4804-B554-1A28D6484403}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55E262F3-4E8C-414C-99FF-59BBE6FB00B8}

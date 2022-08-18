@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:61428/",
-      "sslPort": 44367
+      "applicationUrl": "http://localhost:49526/",
+      "sslPort": 44329
     }
   },
   "profiles": {
@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SkillTracker.AWSServerless.RabbitMQ.Publish": {
+    "SkillTracker.AWSServerless.RabbitMQ.Receive": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
