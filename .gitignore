@@ -48,3 +48,6 @@
 /SkillTracker.AWSServerless.RabbitMQ.Receive/obj
 /SkillTracker.AWSServerless.RabbitMQ.Receive/SkillTracker.AWSServerless.RabbitMQ.Receive.csproj.user
 /SkillTracker.AWSServerless.RabbitMQ.Receive/bin/Release/netcoreapp3.1
+/AWSCognitoTest/obj
+/AWSCognitoTest/bin/Debug/netcoreapp3.1
+/AWSCognitoTest/AWSCognitoTest.csproj.user

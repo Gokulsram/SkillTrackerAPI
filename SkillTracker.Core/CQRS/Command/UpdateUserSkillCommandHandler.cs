@@ -6,15 +6,15 @@ namespace SkillTracker.Core
 {
     public class UpdateUserSkillCommandHandler : IRequestHandler<UpdateUserSkillCommand, BaseResponse>
     {
-        private readonly IUserProfileRepository _userProfileRepository;
-        public UpdateUserSkillCommandHandler(IUserProfileRepository userProfileRepository)
+        private readonly IMemCacheHelper _memCacheHelper;
+        public UpdateUserSkillCommandHandler(IMemCacheHelper memCacheHelper)
         {
-            _userProfileRepository = userProfileRepository;
+            _memCacheHelper = memCacheHelper;
         }
 
         public async Task<BaseResponse> Handle(UpdateUserSkillCommand request, CancellationToken cancellationToken)
         {
-            return await _userProfileRepository.EditUserProfile(request.UserId, request.Skills);
+            return await _memCacheHelper.EditUserProfile(request.UserId, request.Skills);
         }
     }
 }

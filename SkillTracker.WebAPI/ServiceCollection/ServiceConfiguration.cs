@@ -28,8 +28,8 @@ namespace SkillTracker.WebAPI
         public static void AddCQRSServices(this IServiceCollection services)
         {
             services.AddTransient<IRequestHandler<CreateUserSkillCommand, BaseResponse>, CreateUserSkillCommandHandler>();
-            //services.AddTransient<IRequestHandler<UpdateUserSkillCommand, BaseResponse>, UpdateUserSkillCommandHandler>();
-            // services.AddTransient<IRequestHandler<GetUserSkillByUserIdQuery, User>, GetUserSkillByUserIdHandler>();
+            services.AddTransient<IRequestHandler<UpdateUserSkillCommand, BaseResponse>, UpdateUserSkillCommandHandler>();
+            services.AddTransient<IRequestHandler<GetUserSkillByUserIdQuery, UserSkill>, GetUserSkillByUserIdHandler>();
             services.AddTransient<IRequestHandler<GetUserSkillByTypeQuery, List<UserProfileDetail>>, GetUserSkillByTypeHandler>();
         }
     }

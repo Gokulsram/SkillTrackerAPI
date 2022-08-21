@@ -9,5 +9,6 @@ namespace SkillTracker.Core
         Task<BaseResponse> AddUserProfile(UserSkill userSkill);
         Task<BaseResponse> EditUserProfile(int userId, List<Skills> editUserProfile);
         List<UserProfileDetail> GetAllUserProfile(SearchCrteria searchCrteria);
+        UserSkill GetUserProfileById(int UserId);
     }
 }

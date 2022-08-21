@@ -36,9 +36,19 @@ namespace SkillTracker.InfraStructure
             }
         }
 
-        public Task<BaseResponse> EditUserProfile(int userId, List<Skills> editUserProfile)
+        public async Task<BaseResponse> EditUserProfile(int userId, List<Skills> editUserProfile)
         {
-            throw new NotImplementedException();
+            var userProfileCache = _memCache.Get<List<UserSkill>>(_uerProfile);
+            UserSkill userProfile = userProfileCache.Where(x => x.UserID == userId).FirstOrDefault();
+            foreach (var skill in editUserProfile)
+            {
+                userProfile.SkillList.Add(skill);
+            }
+            userProfileCache.Remove(userProfile);
+            userProfileCache.Add(userProfile);
+
+            await _memCache.SetAsync(_uerProfile, userProfileCache, 24 * 40 * 60);
+            return new BaseResponse { StatusCode = 200, StatusDescription = "Success" };
         }
 
         public List<UserProfileDetail> GetAllUserProfile(SearchCrteria searchCrteria)
@@ -78,7 +88,11 @@ namespace SkillTracker.InfraStructure
             }
         }
 
-
+        public UserSkill GetUserProfileById(int UserId)
+        {
+            var userProfileCache = _memCache.Get<List<UserSkill>>(_uerProfile);
+            return userProfileCache.Where(x => x.UserID == UserId).FirstOrDefault();
+        }
     }
 
 }

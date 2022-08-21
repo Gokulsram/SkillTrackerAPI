@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SkillTracker.Core;
 using SkillTracker.Domain;
@@ -33,6 +34,7 @@ namespace SkillTracker.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("update-profile/{userid}")]
         public async Task<ActionResult<BaseResponse>> EditUserProfile(int userid, [FromBody] List<Skills> skillList)
         {

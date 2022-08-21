@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using SkillTracker.Core;
@@ -60,6 +61,9 @@ namespace SkillTracker.WebAPI
                 var serviceClientSettingsConfig = Configuration.GetSection("RabbitMq");
                 services.Configure<RabbitMqConfiguration>(serviceClientSettingsConfig);
 
+               
+           
+
                 var cacheSettings = Configuration.GetSection("CacheSettings");
                 services.Configure<CacheConfiguration>(cacheSettings);
 
@@ -73,16 +77,26 @@ namespace SkillTracker.WebAPI
                 var awsOptions = Configuration.GetAWSOptions();
                 services.AddDefaultAWSOptions(awsOptions);
 
+                var awsConfig = Configuration.GetSection("AWS");
+                services.Configure<AWSCofiguration>(awsConfig);
 
-                var dynamoDbConfig = Configuration.GetSection("AWS");
-
-                var credentials = new BasicAWSCredentials(dynamoDbConfig.GetValue<string>("AccessKey"), dynamoDbConfig.GetValue<string>("SecretKey"));
+                var credentials = new BasicAWSCredentials(awsConfig.GetValue<string>("AccessKey"), awsConfig.GetValue<string>("SecretKey"));
                 var config = new AmazonDynamoDBConfig()
                 {
                     RegionEndpoint = RegionEndpoint.APSouth1
                 };
                 var client = new AmazonDynamoDBClient(credentials, config);
                 services.AddSingleton<IAmazonDynamoDB>(client);
+
+                services.AddAuthentication("Bearer")
+                 .AddJwtBearer(options =>
+                 {
+                     options.TokenValidationParameters = new TokenValidationParameters { ValidateAudience = false };
+                     options.Audience = awsConfig.GetValue<string>("CognitoClientID");
+                     options.Authority = awsConfig.GetValue<string>("Authority");
+                     options.RequireHttpsMetadata = false;
+                 });
+
                 //   var runLocalDynamoDb = dynamoDbConfig.GetValue<bool>("LocalMode");
                 //services.AddSingleton<IAmazonDynamoDB>(sp =>
                 //{
@@ -201,6 +215,9 @@ namespace SkillTracker.WebAPI
 
                 app.UseSwagger();
                 app.UseEnyimMemcached();
+
+                app.UseAuthentication();
+                app.UseAuthorization();
 
                 app.UseSwaggerUI(c =>
                 {

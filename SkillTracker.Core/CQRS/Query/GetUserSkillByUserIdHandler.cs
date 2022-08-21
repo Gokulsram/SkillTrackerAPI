@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace SkillTracker.Core
 {
-    public class GetUserSkillByUserIdHandler : IRequestHandler<GetUserSkillByUserIdQuery, User>
+    public class GetUserSkillByUserIdHandler : IRequestHandler<GetUserSkillByUserIdQuery, UserSkill>
     {
-        private readonly IUserProfileRepository _userProfileRepository;
-        public GetUserSkillByUserIdHandler(IUserProfileRepository userProfileRepository)
+        private readonly IMemCacheHelper _memCacheHelper;
+        public GetUserSkillByUserIdHandler(IMemCacheHelper memCacheHelper)
         {
-            _userProfileRepository = userProfileRepository;
+            _memCacheHelper = memCacheHelper;
         }
-        public async Task<User> Handle(GetUserSkillByUserIdQuery request, CancellationToken cancellationToken)
+        public async Task<UserSkill> Handle(GetUserSkillByUserIdQuery request, CancellationToken cancellationToken)
         {
-            return await _userProfileRepository.GetUserProfileByUserId(request.UserId);
+            return _memCacheHelper.GetUserProfileById(request.UserId);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace SkillTracker.Core.Test
         public GetUserSkillByUserIdHandlerTest()
         {
             _userProfileRepository = A.Fake<IUserProfileRepository>();
-            _getUserSkillByUserIdHandler = new GetUserSkillByUserIdHandler(_userProfileRepository);
+           // _getUserSkillByUserIdHandler = new GetUserSkillByUserIdHandler(_userProfileRepository);
             _user = new User { UserID = 1 };
         }
         [Fact]

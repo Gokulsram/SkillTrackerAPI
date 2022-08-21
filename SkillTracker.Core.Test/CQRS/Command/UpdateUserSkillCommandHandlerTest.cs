@@ -15,7 +15,7 @@ namespace SkillTracker.Core.Test
         public UpdateUserSkillCommandHandlerTest()
         {
             _userProfileRepository = A.Fake<IUserProfileRepository>();
-            _updateUserSkillCommandHandler = new UpdateUserSkillCommandHandler(_userProfileRepository);
+            //_updateUserSkillCommandHandler = new UpdateUserSkillCommandHandler(_userProfileRepository);
         }
 
         [Fact]
