@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: app
+  - source: /sites/SkillTracker.WebAPI/app
     destination: /var/www/
-  - source: deploy-scripts/webapi.service
+  - source: /sites/SkillTracker.WebAPI/deploy-scripts/webapi.service
     destination: /etc/systemd/system
 hooks:
   BeforeInstall:
