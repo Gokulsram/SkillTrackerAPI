@@ -7,14 +7,14 @@ files:
     destination: /etc/systemd/system
 hooks:
   BeforeInstall:
-    - location: deploy-scripts/before_install.sh
+    - location: /sites/SkillTracker.WebAPI/deploy-scripts/before_install.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: deploy-scripts/stop_app.sh
+    - location: /sites/SkillTracker.WebAPI/deploy-scripts/stop_app.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: deploy-scripts/start_app.sh
+    - location: /sites/SkillTracker.WebAPI/deploy-scripts/start_app.sh
       timeout: 300
       runas: root
