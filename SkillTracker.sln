@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.AWSServerless.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkillTracker.AWSServerless.RabbitMQ.Receive", "SkillTracker.AWSServerless.RabbitMQ.Receive\SkillTracker.AWSServerless.RabbitMQ.Receive.csproj", "{287AFBF4-BA83-4C33-8EAA-B6DEE397757E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSCognitoTest", "AWSCognitoTest\AWSCognitoTest.csproj", "{7F5E4B52-F177-487A-86D1-981FC1438345}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWSCognitoTest", "AWSCognitoTest\AWSCognitoTest.csproj", "{7F5E4B52-F177-487A-86D1-981FC1438345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
