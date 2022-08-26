@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="app\**" />
+    <Compile Remove="deploy-scripts\**" />
+    <Content Remove="app\**" />
+    <Content Remove="deploy-scripts\**" />
+    <EmbeddedResource Remove="app\**" />
+    <EmbeddedResource Remove="deploy-scripts\**" />
+    <None Remove="app\**" />
+    <None Remove="deploy-scripts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.7.5.7" />
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.3.67" />
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.2" />
@@ -22,11 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SkillTracker.RabbitMQ.publish\SkillTracker.RabbitMQ.Publish.csproj" />
     <ProjectReference Include="..\SkillTracker.Shared\SkillTracker.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="deploy-scripts\" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/azure-deviceupdate-import-manifest-5.0.json" /></VisualStudio></ProjectExtensions>

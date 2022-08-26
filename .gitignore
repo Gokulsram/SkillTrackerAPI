@@ -51,3 +51,4 @@
 /AWSCognitoTest/obj
 /AWSCognitoTest/bin/Debug/netcoreapp3.1
 /AWSCognitoTest/AWSCognitoTest.csproj.user
+/SkillTracker.WebAPI/bin/Release/netcoreapp3.1
