@@ -3,6 +3,7 @@ using SkillTracker.Core;
 using SkillTracker.Domain;
 using System;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace SkillTracker.WebAPI.Controllers
 {
@@ -23,7 +24,7 @@ namespace SkillTracker.WebAPI.Controllers
             {
                 var skill = await _skillService.GetSkill();
                 if (skill == null) return NotFound();
-                return Ok(skill);
+                return Ok(skill.OrderBy(x=>x.SkillId));
                 //return new BaseResponse { StatusDescription = "Success" };
             }
             catch (Exception ex)
